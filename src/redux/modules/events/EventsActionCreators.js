@@ -1,4 +1,4 @@
-import { GET_EVENTS } from './EventsActionTypes'; 
+import { GET_EVENTS, GET_EVENT_DETAILS } from './EventsActionTypes'; 
 const axios = require('axios'); 
 
 export const getEvents = sport => {
@@ -14,4 +14,11 @@ export const getEvents = sport => {
       payload: events
     })
   }
+}; 
+
+export const getEventDetails = id => {
+  return ({
+    type: GET_EVENT_DETAILS, 
+    payload: id
+  })
 }

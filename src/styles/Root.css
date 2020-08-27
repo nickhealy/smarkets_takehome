@@ -16,6 +16,7 @@ html, body, #root {
   height: 100vh; 
   width: 100vw; 
   background-color: var(--black);
+  font-family: 'Open Sans', sans-serif;
 }
 
 #root {
@@ -24,6 +25,12 @@ html, body, #root {
   justify-content: center;
 }
 
+.link {
+  text-decoration: none; 
+  color: inherit;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import 'App.css';
 @import 'EventsDisplay.css';
-@import 'EventCards.css';
+@import 'EventDetails.css'; 
