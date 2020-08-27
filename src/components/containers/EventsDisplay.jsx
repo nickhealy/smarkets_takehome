@@ -4,6 +4,7 @@ import { getEvents } from '../../redux/modules/events/EventsActionCreators';
 import Event from '../views/Event'; 
 import MainEvent from '../views/MainEvent'; 
 
+
 const mapStateToProps = state => ({
   events: state.events.popularEvents
 }); 
@@ -12,7 +13,7 @@ const mapDispatchToProps = dispatch => ({
   getEvents: dispatch(getEvents())
 })
 
-const App = ({ events }) => {
+const EventsDisplay = ({ events }) => {
 
   useEffect(() => {
     getEvents();
@@ -21,17 +22,16 @@ const App = ({ events }) => {
   const renderEvents = useCallback(() => {
     return events.map((eventInfo, i) => {
       return i === 0
-        ? <MainEvent eventInfo={eventInfo} /> 
-        : <Event eventInfo ={eventInfo} />
+        ? <MainEvent key='main-event' eventInfo={eventInfo} /> 
+        : <Event key={`event+${eventInfo.name}`} gridId={i} eventInfo ={eventInfo} />
     })
   }, [events]); 
 
   return (
-    <div className="App">
-      Hello
+    <div className="events-display">
       {renderEvents()}
     </div>
   );
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(EventsDisplay);

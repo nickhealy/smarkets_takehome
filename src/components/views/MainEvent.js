@@ -2,7 +2,7 @@ import React from 'react';
 
 const MainEvent = ({ eventInfo })=> {
   return (
-  <div><strong>{eventInfo.name}</strong></div>
+  <div className='event main-event'>{eventInfo.name}</div>
   )
 }; 
 
