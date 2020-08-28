@@ -1,5 +1,7 @@
 import React from 'react'; 
 
+// NOTE: I wrote these date and time functions by hand because, given the limited functionality I needed, it seemed like overkill to import another library, especially one as big as moment.js
+
 const getDayOfWeek = date => {
   const days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY']; 
 
@@ -17,7 +19,7 @@ const formatTime = date => {
   return hours + ':' + minutes + ' ' + ampm;
 }; 
 
-
+// returns the string "today" 'tomorrow' or 'yesterday', or finds day of the week, depending on date event is supposed to happen
 const getTodayTomorrowOrYesterday = (date, today = new Date()) => {
   const eventDate = new Date(date); 
 

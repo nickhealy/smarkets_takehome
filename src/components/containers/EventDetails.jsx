@@ -9,15 +9,20 @@ import ReturnBtn from '../views/ReturnBtn.jsx';
 
 
 const EventDetails = () => {
+  // get this data from the redux store, which get populated when user clicks an event
   const eventDetails = useSelector(state => state.events.eventInFocus); 
   return (
-    <div className='event-details-container'>
-      <LeagueInfo eventSlug={eventDetails.full_slug} />
-      <MatchName name={eventDetails.name} />
-      <BettableTag bettable={eventDetails.bettable} />
-      <hr/>
-      <EventTime start_date={eventDetails.start_date} start_datetime={eventDetails.start_datetime} />
-    </div>
+    <section className='event-details-container'>
+      <div className='left'>
+        <LeagueInfo eventSlug={eventDetails.full_slug} />
+        <MatchName name={eventDetails.name} />
+        <BettableTag bettable={eventDetails.bettable} />
+        <hr/>
+        <EventTime start_date={eventDetails.start_date} start_datetime={eventDetails.start_datetime} />
+      </div>
+      {/* this div holds an image, it is purely decorative, has no real content, so I decided to have it be a background image */}
+      <div className='right'></div>
+    </section>
   )
 }
 

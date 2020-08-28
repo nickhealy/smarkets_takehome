@@ -6,6 +6,7 @@ import {
   Route
 } from "react-router-dom";
 
+// for now, there are two routes: one to the page that displays the events '/', and one to the page with details about a particular event
 
 
 const App = () => {

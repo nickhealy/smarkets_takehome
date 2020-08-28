@@ -1,6 +1,7 @@
+/* EVENTS DESCRIPTION, AT TOP OF PAGE */
+
 .events-description {
-  padding: 2rem 0; 
-  color: white; 
+  padding: 2rem 0;
 }
 
 .events-description h1 {
@@ -14,6 +15,8 @@
   width: 50%;
 }
 
+/* LAYOUT OF EVENTS */
+
 .events-display {
   width: 100%; 
   height: 75%;
@@ -23,6 +26,8 @@
   grid-gap: .5rem; 
   grid-auto-flow: column;
 }
+
+/* STYLINGS FOR INDIVIDUAL EVENTS */
 
 .event {
   padding: 1rem ;
@@ -38,14 +43,37 @@
   transition: 250ms ease-out; 
 }
 
+/* INTERNAL DESIGN OF CARDS */
+
+.event-card h3 {
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
+
+.happening-now {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: .5rem; 
+  opacity: .75;
+}
+
+.happening-now svg {
+  font-size: .5rem;
+  margin-right: .5rem;
+}
+
 .event-card:hover, .main-event:hover {
   background-color: var(--dark-grey-active);
   transition: 300ms ease-out; 
 }
 
+/* MAIN EVENT */
+
 .main-event:after{
   content: '';
   display: block;
+  /* In real life, this would be dynamically generated, probably in the .jsx file*/
   background: url('https://wamu.org/wp-content/uploads/2019/07/42969962855_b78fd3491e_k-1500x917.jpg');
   background-position: center;
   background-repeat: no-repeat;
