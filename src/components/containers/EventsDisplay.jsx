@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from 'react';
 import { connect } from 'react-redux';
 import { getEvents } from '../../redux/modules/events/EventsActionCreators'; 
-import Event from '../views/Event'; 
+import Event from '../views/Event.jsx'; 
 import EventsDescription from '../views/EventsDescription.jsx';
  
 // get array of events froms store

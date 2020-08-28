@@ -14,7 +14,7 @@ const LeagueInfo = ({ eventSlug }) => {
   const [sport, league] = parseSlug(eventSlug); 
   
   return (
-    <span class='league-info'>{sport} | {league}</span>
+    <span className='league-info'>{sport} | {league}</span>
   ); 
 }; 
 
