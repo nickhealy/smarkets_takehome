@@ -10,8 +10,8 @@ const EventDetails = () => {
   const eventDetails = useSelector(state => state.events.eventInFocus); 
   return (
     <div className='event-details-container'>
-      <MatchName name={eventDetails.name} />
       <LeagueInfo eventSlug={eventDetails.full_slug} />
+      <MatchName name={eventDetails.name} />
       <BettableTag bettable={eventDetails.bettable} />
       <hr/>
       <EventTime start_date={eventDetails.start_date} start_datetime={eventDetails.start_datetime} />

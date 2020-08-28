@@ -1,6 +1,6 @@
 import React from 'react'; 
 
-const formatMatchName = name => {
+export const formatMatchName = name => {
   return name ? name.split(' vs ') : [null, null]; 
 }
 

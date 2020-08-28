@@ -1,30 +1,10 @@
-.match-name, .event-time, .league-info {
+.match-name, .event-time {
   color: white; 
+
 }
 
-.event {
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  border-radius: .2em; 
-  cursor: pointer; 
-}
-
-.event-card {
-  width: 100%; 
-  height: 100%; 
-  background-color: var(--dark-grey);
-  transition: 250ms ease-out; 
-}
-
-.event-card:hover {
-  background-color: var(--dark-grey-active);
-  transition: 250ms ease-out; 
-}
-
-.main-event {
-  background-color: orange;
-  grid-row: 1 / 4;
+.league-info {
+  color: var(--green);
 }
 
 .event-details-container {

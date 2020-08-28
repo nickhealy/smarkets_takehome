@@ -2,7 +2,8 @@ import React, { useEffect, useCallback } from 'react';
 import { connect } from 'react-redux';
 import { getEvents } from '../../redux/modules/events/EventsActionCreators'; 
 import Event from '../views/Event'; 
-import MainEvent from '../views/MainEvent'; 
+import EventsDescription from '../views/EventsDescription.jsx';
+ 
 
 
 const mapStateToProps = state => ({
@@ -21,16 +22,19 @@ const EventsDisplay = ({ events }) => {
 
   const renderEvents = useCallback(() => {
     return events.map((eventInfo, i) => {
-      return i === 0
-        ? <MainEvent key='main-event' eventInfo={eventInfo} /> 
-        : <Event key={`event+${eventInfo.name}`} gridId={i} eventInfo ={eventInfo} />
+      return (
+        <Event key={`event+${eventInfo.name}`} isMainEvent={i === 0} eventInfo ={eventInfo} />
+      )
     })
   }, [events]); 
 
   return (
-    <div className="events-display">
-      {renderEvents()}
-    </div>
+    <>
+      <EventsDescription eventType={'Tennis'} />
+      <div className="events-display">
+        {renderEvents()}
+      </div>
+    </>
   );
 }
 
