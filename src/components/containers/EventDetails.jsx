@@ -2,6 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';  
 import MatchName from '../views/MatchName.jsx'; 
 import EventTime from '../views/EventTime.jsx'; 
+import BettableTag from '../views/BettableTag.jsx'; 
+import LeagueInfo from '../views/LeagueInfo.jsx'; 
 
 
 const EventDetails = () => {
@@ -9,6 +11,9 @@ const EventDetails = () => {
   return (
     <div className='event-details-container'>
       <MatchName name={eventDetails.name} />
+      <LeagueInfo eventSlug={eventDetails.full_slug} />
+      <BettableTag bettable={eventDetails.bettable} />
+      <hr/>
       <EventTime start_date={eventDetails.start_date} start_datetime={eventDetails.start_datetime} />
     </div>
   )
