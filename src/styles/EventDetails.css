@@ -7,12 +7,43 @@
   color: var(--green);
 }
 
+.return-btn-container {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10%;
+  margin-bottom: 1.5rem; 
+}
+
+.return-btn-container span {
+  font-size: .9rem; 
+  margin-left: .75rem; 
+}
+
+.return-btn {
+  color: white;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 35px; 
+  width: 35px; 
+  border-radius: 50%;
+  border: 1px solid var(--green);
+}
+
+.return-btn:hover {
+  background-color: var(--green); 
+  color: black;
+  transition: 300ms ease-out;
+  cursor: pointer;
+}
+
 .event-details-container {
   width: 100%; 
   height: 50%; 
   padding: 1rem; 
   border-radius: .2em; 
-  margin-top: 20%;
   background-color: var(--dark-grey); 
 }
 

@@ -1,5 +1,5 @@
 .events-description {
-  padding: 2rem; 
+  padding: 2rem 0; 
   color: white; 
 }
 
@@ -11,7 +11,7 @@
 
 .events-description p {
   font-size: .85em; 
-  width: 55%;
+  width: 50%;
 }
 
 .events-display {
@@ -49,7 +49,7 @@
   background: url('https://wamu.org/wp-content/uploads/2019/07/42969962855_b78fd3491e_k-1500x917.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  opacity: .6;
+  opacity: .45;
   position: absolute;
   top: 0; 
   right: 0;

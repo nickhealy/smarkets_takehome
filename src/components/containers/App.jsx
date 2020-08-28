@@ -1,6 +1,6 @@
 import React from 'react';
 import EventsDisplay from './EventsDisplay.jsx';
-import EventDetails from './EventDetails.jsx'; 
+import EventDetailsContainer from './EventDetailsContainer.jsx'; 
 import {
   Switch,
   Route
@@ -14,7 +14,7 @@ const App = () => {
     <div className="app-container">
       <Switch>
         <Route path='/event-details'>
-          <EventDetails />
+          <EventDetailsContainer />
         </Route>
         <Route path='/'>
           <EventsDisplay />
