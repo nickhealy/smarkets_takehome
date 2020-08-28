@@ -16,6 +16,8 @@ If I were to refactor this, I would definitely do another pass on the JSX for ac
 ### Additional Thoughts
 I made the decision to implement some date functions in order to save myself the trouble of importing the enormous moment.js library. I only needed a little date functionality, so it was worth the extra coding on my part. They probably do not account for all edge cases (I would almost certainly use a library for a larger application), but they serve the needs of this app just fine. With a little more time withe API, I probably could have figued out way to have the events display also tell you when an event is actually live (right now any event that whose start time is earlier than the present time just say "HAPPENING NOW"), and some of the other timing related functionality on the Smarkets site. As I said, though, I think what I came up with is a good solution, given the scope of the application.
 
+To start: npm start (I built it with create-react-app)
+
 Anyway, like I said, I really enjoyed this project. Please let me know if you have any questions! I look forward to hearing from you.
 
 All the best, 
