@@ -20,14 +20,21 @@ const Event = ({ eventInfo, isMainEvent }) => {
 
   return (
     <Link
-    // clicking the link updates the redux store with the click event's info
+    // clicking the link updates the redux store with the click event's 
       onClick={(id) => dispatch(getEventDetails(eventInfo.id))}
       to={`/event-details${eventInfo.full_slug}`}
       className={isMainEvent ? ' event main-event link ' : 'event event-card link'}
       >
       <LeagueInfo eventSlug={eventInfo.full_slug} />
       <MatchName name = {eventInfo.name} />
-      <div class='happening-now'><FaClock />{hoursFromNow > 0 ? hoursFromNow + ' HOURS FROM NOW' : 'HAPPENING NOW'}</div>
+      <div class='happening-now'>
+        <FaClock />
+        { hoursFromNow > 0 
+          ? hoursFromNow === 1 
+          ? hoursFromNow + ' HOUR FROM NOW' 
+          : hoursFromNow + ' HOURS FROM NOW' 
+          : 'HAPPENING NOW'
+        }</div>
     </Link>
   )
 }; 

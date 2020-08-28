@@ -81,6 +81,10 @@
   margin-bottom: 1rem; 
 }
 
+.match-name-container {
+  margin-bottom: 1.5rem;
+}
+
 .event-time {
   margin-top: .5rem; 
   font-size: .5rem;
